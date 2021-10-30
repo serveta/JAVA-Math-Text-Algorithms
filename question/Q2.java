@@ -4,7 +4,7 @@ public class Q2 {
 	
 	private String userName;
 	private String welcome = "Hi! Welcome, ";
-	private String question = "\n 1-Math \n 2-Text \n Enter your choice: ";
+	private String question = "\n 1-Math \n 2-Text \n Q2: Enter your choice: ";
 	
 	public Q2() {
 		

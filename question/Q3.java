@@ -6,7 +6,7 @@ public class Q3 {
 			+ " \n 2-Perimeter calculation "
 			+ " \n 3-Calculator"
 			+ " \n 4-Other"
-			+ " \n Enter your choice: ";
+			+ " \n Q3: Enter your choice: ";
 	
 	public void getQuestion() {
 		System.out.print(this.question);

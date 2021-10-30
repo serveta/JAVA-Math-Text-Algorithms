@@ -8,15 +8,15 @@ public class A2 {
 		this.choice = choice;
 	}
 	
-	private void previousQuestion() {
+	/*private void previousQuestion() {
 		
-	}
+	}*/
 	
 	public void nextQuestion() {
-		if (this.choice == 0) {
+		/*if (this.choice == 0) {
 			previousQuestion();
 		}
-		else if (this.choice == 1) {
+		else*/ if (this.choice == 1) {
 			Q3 q3 = new Q3();
 			q3.getQuestion();
 		}
