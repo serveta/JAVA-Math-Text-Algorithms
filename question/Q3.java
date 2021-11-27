@@ -8,6 +8,10 @@ public class Q3 extends qNa.Question {
 			+ " \n 4-Other"
 			+ " \n Q3: Enter your choice: ";
 	
+	public Q3() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void getQuestion() {
 		System.out.print(this.question);
 	}

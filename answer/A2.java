@@ -3,18 +3,16 @@ import question.*;
 
 public class A2 extends qNa.Answer {
 	
-	public void nextQuestion() {
-		Q3 q3 = new Q3();
-		q3.getQuestion();
-	}
-
-	@Override
-	public void getAnswer(int answer) {
+	//int answer;
+	
+	public void nextQuestion(String uName, int answer) {
 		if(answer==1) {
-			
+			Q3 q3 = new Q3();
+			q3.getQuestion();
 		}
 		if(answer==2) {
-			
+			Q4 q4 = new Q4();
+			q4.getQuestion();
 		}
 	}
 

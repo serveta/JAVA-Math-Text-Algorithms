@@ -4,7 +4,11 @@ public class Q2 extends qNa.Question {
 	
 	private String userName;
 	private String welcome = "Hi! Welcome, ";
-	private String question = "\n 1-Math \n 2-Text \n Q2: Enter your choice: ";
+	private String question = ""
+			+ "\n 0-Previous Question "
+			+ "\n 1-Math "
+			+ "\n 2-Text "
+			+ "\nQ2: Enter your choice: ";
 	
 	public Q2() {
 		

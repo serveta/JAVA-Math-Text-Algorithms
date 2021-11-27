@@ -8,6 +8,8 @@ public abstract class Answer {
 	public void getAnswer(int answer) {
 		
 	}
-	abstract public void nextQuestion();
+	public void nextQuestion(String uName, int number) {
+		
+	}
 	abstract public void getAnswer();
 }

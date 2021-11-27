@@ -19,12 +19,12 @@ public class AlgorithmStarter {
 		};
 		
 		for(int i=0;i<question.length;i++) {
-			if(i==1) {
-				new Q2(answerStr).getQuestion();
-			}
-			else {
+			if(i==0){
 				question[i].getQuestion();
 			}
+			if(i==1) {
+				new Q2(answerStr).getQuestion();
+			}	
 			for(int j=0;j<1;j++) {
 				if(i==0) {
 					Scanner scan = new Scanner(System.in);
@@ -39,7 +39,8 @@ public class AlgorithmStarter {
 						i=i-2;
 					}
 					else {
-						answer[i].getAnswer(answerInt);
+						//answer[i].getAnswer(answerInt);
+						answer[i].nextQuestion(answerStr,answerInt);
 					}
 				}
 			}
