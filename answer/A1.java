@@ -2,11 +2,15 @@ package answer;
 
 import question.*;
 
-public class A1 {
+public class A1 extends qNa.Answer {
 	private String userName;
 	
-	public A1(String userName) {
+	public void getAnswer(String userName) {
 		this.userName = userName;
+	}
+	
+	public void getAnswer() {
+		
 	}
 	
 	public void nextQuestion() {

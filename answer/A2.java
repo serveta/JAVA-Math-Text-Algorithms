@@ -1,24 +1,26 @@
 package answer;
 import question.*;
 
-public class A2 {
-	private int choice; 
-	
-	public A2(int choice) {
-		this.choice = choice;
-	}
-	
-	/*private void previousQuestion() {
-		
-	}*/
+public class A2 extends qNa.Answer {
 	
 	public void nextQuestion() {
-		/*if (this.choice == 0) {
-			previousQuestion();
+		Q3 q3 = new Q3();
+		q3.getQuestion();
+	}
+
+	@Override
+	public void getAnswer(int answer) {
+		if(answer==1) {
+			
 		}
-		else*/ if (this.choice == 1) {
-			Q3 q3 = new Q3();
-			q3.getQuestion();
+		if(answer==2) {
+			
 		}
+	}
+
+	@Override
+	public void getAnswer() {
+		// TODO Auto-generated method stub
+		
 	}
 }

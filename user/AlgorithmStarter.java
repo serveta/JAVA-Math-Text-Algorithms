@@ -3,90 +3,47 @@ package user;
 import java.util.Scanner;
 import question.*;
 import answer.*;
+import qNa.*;
 
 public class AlgorithmStarter {
-	
-	//static Scanner scan = new Scanner(System.in);
-	static int answerInt=0;
-	public static int request(int r) {
-		return answerInt = r;
-	}
-	
+
 	public static void main(String[] args) {
+		String answerStr="";
+		int answerInt;
 		
-		int i=1;
+		Question[] question = {
+				new Q1(), new Q2(), new Q3()
+		};
+		Answer[] answer = {
+				new A1(), new A2(), new A3()
+		};
 		
-		do {
-			if (answerInt == 5) {
-				i = answerInt ;
+		for(int i=0;i<question.length;i++) {
+			if(i==1) {
+				new Q2(answerStr).getQuestion();
 			}
-
-				if (i==1) {
-					question1();
-					i++;
+			else {
+				question[i].getQuestion();
+			}
+			for(int j=0;j<1;j++) {
+				if(i==0) {
+					Scanner scan = new Scanner(System.in);
+					answerStr = scan.nextLine();
+					answer[i].getAnswer(answerStr);
 				}
-				if (i==2) {
-					question2();
+				else {
+					Scanner scan = new Scanner(System.in);
+					answerInt = scan.nextInt();
+					
+					if(answerInt==0) {
+						i=i-2;
+					}
+					else {
+						answer[i].getAnswer(answerInt);
+					}
 				}
-				if (i==3) {
-					question3();
-				}
-				if (i==5) {
-					i--;
-				}
+			}
+		}
 				
-			
-			
-			/*
-			switch (i) {
-			case 1:question1(); i=2; continue;
-			case 2:question2(); i=3; break;
-			case 3:question3(); break;
-			default:
-				//System.out.print("Error"); 
-				break;
-			}
-			
-			
-			//guide(i);
-			*/
-		} while (i<4);
-
 	}
-	
-	public static void guide(int request) {
-		
-		
-		//question1();
-		//question2();
-		//question3();
-	}
-	
-	public static void question1() {
-		String answerStr;
-		Q1 q1 = new Q1();
-		q1.getQuestion();
-		Scanner scan = new Scanner(System.in);
-		answerStr = scan.nextLine();
-		A1 a1 = new A1(answerStr);
-		a1.nextQuestion();
-	}
-	
-	public static void question2() {
-		int answer;
-		Scanner scan = new Scanner(System.in);
-		answer = scan.nextInt();
-		//answerInt = answer;
-		A2 a2 = new A2(answer);
-		a2.nextQuestion();
-		request(answer);
-	}
-	
-	public static void question3() {
-		Scanner scan = new Scanner(System.in);
-		answerInt = scan.nextInt();
-		A3 a3 = new A3(answerInt);
-		a3.nextQuestion();
-	}
-
 }

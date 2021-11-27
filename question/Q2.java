@@ -1,6 +1,6 @@
 package question;
 
-public class Q2 {
+public class Q2 extends qNa.Question {
 	
 	private String userName;
 	private String welcome = "Hi! Welcome, ";
@@ -9,12 +9,16 @@ public class Q2 {
 	public Q2() {
 		
 	}
+	
 	public Q2(String user) {
 		this.userName = user;
 	}
 	
 	public String getUserName() {
-		return userName;
+		return this.userName;
+	}
+	public void setUserName(String userName) {
+		 this.userName = userName;
 	}
 	
 	public String getWelcome() {

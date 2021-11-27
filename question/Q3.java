@@ -1,6 +1,6 @@
 package question;
 
-public class Q3 {
+public class Q3 extends qNa.Question {
 	private String question = "\n 0-Previous Question"
 			+ " \n 1-Area calculation"
 			+ " \n 2-Perimeter calculation "
