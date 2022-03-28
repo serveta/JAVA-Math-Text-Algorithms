@@ -17,11 +17,11 @@ public class App {
 		
 		
 		mainQuestion[0] = "What is your name?\n Answer: ";
-		mainQuestion[1] = "1-Math\n2-Text\n0-Back\n01-Main Menu\n0*-Close \n Answer: ";
+		mainQuestion[1] = "\n1-Math\n2-Text\n0-Back\n01-Main Menu\n0*-Close \n Answer: ";
 		
-		mathAlgorithmQuestion[0] = "1-Math\n2-Math\n0-Back\n01-Main Menu\n0*-Close \n Answer: ";
+		mathAlgorithmQuestion[0] = "\n1-Math\n2-Math\n0-Back\n01-Main Menu\n0*-Close \n Answer: ";
 		
-		textAlgorithmQuestion[0] = "1-Text\n2-Text\n0-Back\n01-Main Menu\n0*-Close \n Answer: ";
+		textAlgorithmQuestion[0] = "\n1-Text\n2-Text\n0-Back\n01-Main Menu\n0*-Close \n Answer: ";
 		
 		
 		int totalQuestions = mainQuestion.length + mathAlgorithmQuestion.length + textAlgorithmQuestion.length;
@@ -47,9 +47,17 @@ public class App {
 			
 				
 			if(answer.equals("0")) {
+				if(i==0) {
+					just2Answer[i]="Zero";
+					continue;
+				}
 				i-=2;
 			}
 			if(answer.equals("01")) {
+				if(i==0) {
+					just2Answer[i]="ZeroOne";
+					continue;
+				}
 				i=0;
 				continue;
 			}
@@ -60,27 +68,25 @@ public class App {
 			
 			if(i>=1) {
 				if(just2Answer[1].equals("1")) {
-					
 					System.out.print(mathAlgorithmQuestion[--i]);
-					
 					i++;
-					
 				}
 				else if(just2Answer[1].equals("2")) {
-					System.out.println("2222222");
+					System.out.print(textAlgorithmQuestion[--i]);
+					i++;
 				}
 				else {
-					System.out.println("You can choose only;");
+					System.out.println("\nYou can choose only;");
 					i--;
 				}
 			}
 			
 		}
 		
-		System.out.println("The program has been terminated!");
+		System.out.println("\nThe program has been terminated! "+just2Answer[0]);
 		
 	}
 }
 
 
-// Version: 1.1
+// Version: 1.1.0
