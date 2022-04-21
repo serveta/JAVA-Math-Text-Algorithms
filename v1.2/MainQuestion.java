@@ -1,22 +1,10 @@
 
-public class MainQuestion {
+public class MainQuestion extends Question {
 
-	public int length = 0;
-	private int questionNo = 0;
-	private String question;
-	private int selectionRange = 0;
-	private String[] questions;
-	private int[] questionSelectedRange;
-	private int questionLengthControl = 0;
-
-	private String answer;
-	private int answerNo = 0;
 	private String[] answers;
 	
 	public MainQuestion(int length) {		
-		this.length = length;
-		questions = new String[length];
-		questionSelectedRange = new int[length];
+		super(length);
 		answers = new String[length];
 	}
 	
@@ -37,11 +25,6 @@ public class MainQuestion {
 		}
 	}
 	
-	private void save() {
-		questions[this.questionNo] = this.question;
-		questionSelectedRange[this.questionNo] = this.selectionRange;
-		this.questionNo++;
-	}
 	
 	public void getQuestion(int questionNo) {
 		if(questionNo >= length) {

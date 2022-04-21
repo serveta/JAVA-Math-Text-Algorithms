@@ -1,19 +1,10 @@
 
-public class MathQuestion {
-	public int length = 0;
-	private int questionNo = 0;
-	private String question;
-	private int selectionRange = 0;
-	private String[] questions;
-	private int[] questionSelectedRange;
-	private int questionLengthControl = 0;
-
+public class MathQuestion extends Question {
+	
 	private int[] answers;
 	
 	public MathQuestion(int length) {		
-		this.length = length;
-		questions = new String[length];
-		questionSelectedRange = new int[length];
+		super(length);
 		answers = new int[length];
 	}
 	
@@ -32,12 +23,6 @@ public class MathQuestion {
 			save();	
 			questionLengthControl++;
 		}
-	}
-	
-	private void save() {
-		questions[this.questionNo] = this.question;
-		questionSelectedRange[this.questionNo] = this.selectionRange;
-		this.questionNo++;
 	}
 	
 	public void getQuestion(int questionNo) {

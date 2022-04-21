@@ -1,6 +1,9 @@
 import java.util.Scanner;
+import algorithm.Math;
+import algorithm.Text;
 
-public class App1 {
+
+public class App {
 
 	public static void main(String[] args) {
 		
@@ -37,13 +40,13 @@ public class App1 {
 					else if(i > mainQuestion.length) {
 						
 						if(mathQuestion.getAnswer(0) == 1) {
-							Calculator();
+							Math.Calculator();
 						}
 						else if(mathQuestion.getAnswer(0) == 2) {
-							AreaCalculator();
+							Math.AreaCalculator();
 						}
 						else if(mathQuestion.getAnswer(0) == 3) {
-							PerimeterCalculator();
+							Math.PerimeterCalculator();
 						}
 						else {
 							System.out.print("You can choose only;");
@@ -65,10 +68,10 @@ public class App1 {
 					}
 					else if(i > mainQuestion.length) {
 						if(textQuestion.getAnswer(0).equals("1")) {
-							Text();
+							Text.TextOne();
 						}
 						else if(textQuestion.getAnswer(0).equals("2")) {
-							TextTwo();
+							Text.TextTwo();
 						}
 						else {
 							System.out.print("You can choose only;");
@@ -140,28 +143,7 @@ public class App1 {
 		
 	}
 
-	public static void Calculator() {
-		System.out.println("***Caculator Opened***");
-
-	}
-	public static void AreaCalculator() {
-		System.out.println("***Area Caculator Opened***");
-
-	}
-	public static void PerimeterCalculator() {
-		System.out.println("***Perimeter Caculator Opened***");
-
-	}
-	
-	public static void Text() {
-		System.out.println("***TEXT-1 Opened***");
-
-	}	
-	public static void TextTwo() {
-		System.out.println("***TEXT-2 Opened***");
-
-	}		
-	
+		
 	public static int StringToInt(String value) {
 		try{
             int number = Integer.parseInt(value);
@@ -173,8 +155,10 @@ public class App1 {
 	}
 }
 
-// Version: 1.2
+// Version: 1.2.1
 /*
- * The algorithm structure was reconsidered and redesigned within Object-Oriented Programming.
+ * The algorithm structure was reconsidered and redesigned.
+ * Created an abstract class for different Question classes.
+ * Created an algorithm package to store the algorithms.
  */
 
