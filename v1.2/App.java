@@ -41,12 +41,18 @@ public class App {
 						
 						if(mathQuestion.getAnswer(0) == 1) {
 							Math.Calculator();
+							i-=2;
+							continue;
 						}
 						else if(mathQuestion.getAnswer(0) == 2) {
 							Math.AreaCalculator();
+							i-=2;
+							continue;
 						}
 						else if(mathQuestion.getAnswer(0) == 3) {
 							Math.PerimeterCalculator();
+							i-=2;
+							continue;
 						}
 						else {
 							System.out.print("You can choose only;");
